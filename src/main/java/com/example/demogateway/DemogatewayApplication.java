@@ -17,6 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @SpringBootApplication
 public class DemogatewayApplication {
+	public static void main(String[] args) {
+		SpringApplication.run(DemogatewayApplication.class, args);
+	}
 
 	@RequestMapping("/circuitbreakerfallback")
 	public String circuitbreakerfallback() {
@@ -73,7 +76,4 @@ public class DemogatewayApplication {
 		return new MapReactiveUserDetailsService(user);
 	}
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemogatewayApplication.class, args);
-	}
 }
